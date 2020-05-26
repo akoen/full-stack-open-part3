@@ -1,9 +1,13 @@
 const express = require('express');
 const morgan = require('morgan');
 
+morgan.token('object', (req, res) => {
+  return JSON.stringify(req.body);
+});
+
 const app = express();
-app.use(morgan('tiny'));
 app.use(express.json());
+app.use(morgan('tiny'));
 
 const PORT = 3001;
 
@@ -58,6 +62,9 @@ app.delete('/api/persons/:id', (req, res) => {
 });
 
 // POST requests
+
+app.use(morgan(':object'));
+
 app.post('/api/persons', (req, res) => {
   const body = req.body;
 
