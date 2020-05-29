@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "nodemon ",
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:ui": "rm -rf build && cd ../full-stack-open-part3-frontend && npm run build --prod && cp -r build ../full-stack-open-part3-backend"
   },
   "author": "Alex Koen",
   "license": "MIT",

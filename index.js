@@ -8,6 +8,7 @@ morgan.token('object', (req, res) => {
 const app = express();
 app.use(express.json());
 app.use(morgan('tiny'));
+app.use(express.static('build'));
 
 const PORT = 3001;
 
