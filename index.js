@@ -47,20 +47,18 @@ app.use(morgan(':object'));
 app.post('/api/persons', (req, res) => {
   const body = req.body;
 
-  if (persons.find((i) => i.name === body.name)) {
-    res.status(400).json({ error: 'name must be unique' });
-  } else if (persons.find((i) => i.number === body.number)) {
-    res.status(400).json({ error: 'number must be unique' });
-  } else {
-    const person = {
-      ...body,
-      id: Math.floor(Math.random() * 1000),
-    };
-
-    persons = persons.concat(person);
-
-    res.json(person);
+  if (body.name === undefined) {
+    return res.status(400).json({ error: 'name missing' });
   }
+  const person = new Person({
+    name: body.name,
+    number: body.number,
+    date: new Date(),
+  });
+
+  person.save().then((result) => {
+    res.json(person);
+  });
 });
 
 const PORT = process.env.PORT;
