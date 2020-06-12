@@ -2,12 +2,10 @@ const mongoose = require('mongoose');
 
 const url = process.env.MONGODB_URI;
 
-console.log('connecting to', url);
-
 mongoose
   .connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
   .then((result) => {
-    console.log('Connecting to MongoDB');
+    console.log(`Connected to MongoDB at ${url}`);
   })
   .catch((error) => {
     console.log('Error connecting to MongoDB', error.message);
