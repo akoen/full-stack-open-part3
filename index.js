@@ -33,11 +33,20 @@ app.get('/api/persons/:id', (req, res) => {
 
 // DELETE requests
 app.delete('/api/persons/:id', (req, res) => {
-  const id = +req.params.id;
+  Person.findByIdAndDelete(req.params.id)
+        .then((result) => {
+          res.status(204).end();
+        })
+        .catch((error) => {
+          console.log(error);
+          res.status(404).end();
+        });
 
-  persons = persons.filter((i) => i.id !== id);
+  // const id = +req.params.id;
 
-  res.status(204).end();
+  // persons = persons.filter((i) => i.id !== id);
+
+  // res.status(204).end();
 });
 
 // POST requests
