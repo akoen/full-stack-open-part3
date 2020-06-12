@@ -1,0 +1,57 @@
+Info 0    [13:19:27.628] Starting TS Server
+Info 1    [13:19:27.629] Version: 3.9.5
+Info 2    [13:19:27.629] Arguments: /usr/bin/node /usr/bin/tsserver --logFile /home/alex/Programming/full-stack-open-part3/frontend/.log/tsserver.log --logVerbosity info --cancellationPipeName /tmp/c5cab59454c85d96d486a3ddab6cbc51/tscancellation*
+Info 3    [13:19:27.629] Platform: linux NodeVersion: 14 CaseSensitive: true
+Info 4    [13:19:27.642] Search path: /home/alex/Programming/full-stack-open-part3/frontend/src/services
+Info 5    [13:19:27.644] For info: /home/alex/Programming/full-stack-open-part3/frontend/src/services/persons.js :: No config files found.
+Info 6    [13:19:27.651] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 7    [13:19:31.616] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 1 structureChanged: true Elapsed: 3965ms
+Info 8    [13:19:31.616] Project '/dev/null/inferredProject1*' (Inferred)
+Info 9    [13:19:31.616] 	Files (180)
+
+Info 10   [13:19:31.616] -----------------------------------------------
+Info 11   [13:19:31.935] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 12   [13:19:31.939] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 2 structureChanged: false Elapsed: 4ms
+Info 13   [13:19:34.420] Before ensureProjectForOpenFiles:
+Info 14   [13:19:34.420] After ensureProjectForOpenFiles:
+Info 15   [13:19:34.420] got projects updated in background, updating diagnostics for /home/alex/Programming/full-stack-open-part3/frontend/src/services/persons.js
+Info 16   [13:21:48.658] Search path: /home/alex/Programming/full-stack-open-part3/frontend/src/components
+Info 17   [13:21:48.659] For info: /home/alex/Programming/full-stack-open-part3/frontend/src/components/Persons.js :: No config files found.
+Info 18   [13:21:48.663] Starting updateGraphWorker: Project: /dev/null/inferredProject2*
+Info 19   [13:21:48.958] Finishing updateGraphWorker: Project: /dev/null/inferredProject2* Version: 1 structureChanged: true Elapsed: 295ms
+Info 20   [13:21:48.958] Project '/dev/null/inferredProject2*' (Inferred)
+Info 21   [13:21:48.958] 	Files (181)
+
+Info 22   [13:21:48.958] -----------------------------------------------
+Info 23   [13:21:48.961] `remove Project::
+Info 24   [13:21:48.961] Project '/dev/null/inferredProject1*' (Inferred)
+Info 25   [13:21:48.961] 	Files (180)
+
+Info 26   [13:21:48.961] -----------------------------------------------
+Info 27   [13:21:49.248] Starting updateGraphWorker: Project: /dev/null/inferredProject2*
+Info 28   [13:21:49.253] Finishing updateGraphWorker: Project: /dev/null/inferredProject2* Version: 2 structureChanged: false Elapsed: 5ms
+Info 29   [13:21:51.748] Before ensureProjectForOpenFiles:
+Info 30   [13:21:51.748] After ensureProjectForOpenFiles:
+Info 31   [13:21:51.748] got projects updated in background, updating diagnostics for /home/alex/Programming/full-stack-open-part3/frontend/src/services/persons.js,/home/alex/Programming/full-stack-open-part3/frontend/src/components/Persons.js
+Info 32   [13:31:11.440] Search path: /home/alex/Programming/full-stack-open-part3/frontend/src/components
+Info 33   [13:31:11.440] For info: /home/alex/Programming/full-stack-open-part3/frontend/src/components/PersonForm.js :: No config files found.
+Info 34   [13:31:11.441] Starting updateGraphWorker: Project: /dev/null/inferredProject3*
+Info 35   [13:31:11.734] Finishing updateGraphWorker: Project: /dev/null/inferredProject3* Version: 1 structureChanged: true Elapsed: 293ms
+Info 36   [13:31:11.735] Project '/dev/null/inferredProject3*' (Inferred)
+Info 37   [13:31:11.735] 	Files (181)
+
+Info 38   [13:31:11.735] -----------------------------------------------
+Info 39   [13:31:12.156] Starting updateGraphWorker: Project: /dev/null/inferredProject3*
+Info 40   [13:31:12.160] Finishing updateGraphWorker: Project: /dev/null/inferredProject3* Version: 2 structureChanged: false Elapsed: 4ms
+Info 41   [13:31:14.580] Before ensureProjectForOpenFiles:
+Info 42   [13:31:14.581] After ensureProjectForOpenFiles:
+Info 43   [13:31:14.581] got projects updated in background, updating diagnostics for /home/alex/Programming/full-stack-open-part3/frontend/src/services/persons.js,/home/alex/Programming/full-stack-open-part3/frontend/src/components/Persons.js,/home/alex/Programming/full-stack-open-part3/frontend/src/components/PersonForm.js
+Info 44   [13:37:48.817] Starting updateGraphWorker: Project: /dev/null/inferredProject3*
+Info 45   [13:37:48.946] Finishing updateGraphWorker: Project: /dev/null/inferredProject3* Version: 3 structureChanged: false Elapsed: 128ms
+Info 46   [13:37:48.947] Different program with same set of files:: oldProgram.structureIsReused:: 2
+Info 47   [13:38:26.868] Starting updateGraphWorker: Project: /dev/null/inferredProject3*
+Info 48   [13:38:26.946] Finishing updateGraphWorker: Project: /dev/null/inferredProject3* Version: 4 structureChanged: false Elapsed: 78ms
+Info 49   [13:38:26.947] Different program with same set of files:: oldProgram.structureIsReused:: 2
+Info 50   [13:38:27.218] Starting updateGraphWorker: Project: /dev/null/inferredProject3*
+Info 51   [13:38:27.355] Finishing updateGraphWorker: Project: /dev/null/inferredProject3* Version: 5 structureChanged: false Elapsed: 136ms
+Info 52   [13:38:27.355] Different program with same set of files:: oldProgram.structureIsReused:: 2
