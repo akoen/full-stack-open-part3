@@ -16,7 +16,9 @@ app.use(express.static('build'));
 
 app.get('/info', (req, res) => {
   const date = new Date();
-  res.send(`Phonebook has info for ${persons.length} people. <br/><br/>${date}`);
+  Person.count({}, (err, count) => {
+    res.send(`Phonebook has info for ${count} people. <br/><br/>${date}`);
+  });
 });
 
 app.get('/api/persons', (req, res) => {
@@ -27,19 +29,19 @@ app.get('/api/persons', (req, res) => {
 
 app.get('/api/persons/:id', (req, res, next) => {
   Person.findById(req.params.id)
-        .then((person) => {
-          res.json(person);
-        })
-        .catch((error) => next(error));
+    .then((person) => {
+      res.json(person);
+    })
+    .catch((error) => next(error));
 });
 
 // DELETE requests
 app.delete('/api/persons/:id', (req, res, next) => {
   Person.findByIdAndDelete(req.params.id)
-        .then((result) => {
-          res.status(204).end();
-        })
-        .catch((error) => next(error));
+    .then((result) => {
+      res.status(204).end();
+    })
+    .catch((error) => next(error));
 });
 
 // POST & PUT requests
@@ -72,10 +74,10 @@ app.put('/api/persons/:id', (req, res, next) => {
   };
 
   Person.findByIdAndUpdate(req.params.id, person, { new: true })
-        .then((updatedPerson) => {
-          res.json(updatedPerson.toJSON());
-        })
-        .catch((error) => next(error));
+    .then((updatedPerson) => {
+      res.json(updatedPerson.toJSON());
+    })
+    .catch((error) => next(error));
 });
 
 const unknownEndpoint = (req, res) => {
