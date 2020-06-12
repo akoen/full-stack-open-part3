@@ -42,7 +42,7 @@ app.delete('/api/persons/:id', (req, res, next) => {
         .catch((error) => next(error));
 });
 
-// POST requests
+// POST & PUT requests
 
 app.use(morgan(':object'));
 
@@ -61,6 +61,21 @@ app.post('/api/persons', (req, res) => {
   person.save().then((result) => {
     res.json(person);
   });
+});
+
+app.put('/api/persons/:id', (req, res, next) => {
+  const body = req.body;
+
+  const person = {
+    name: body.name,
+    number: body.number,
+  };
+
+  Person.findByIdAndUpdate(req.params.id, person, { new: true })
+        .then((updatedPerson) => {
+          res.json(updatedPerson.toJSON());
+        })
+        .catch((error) => next(error));
 });
 
 const unknownEndpoint = (req, res) => {
