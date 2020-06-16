@@ -7,11 +7,13 @@
     "dev": "nodemon ",
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:ui": "rm -rf build && cd ../frontend && npm run build --prod && cp -r build ../backend"
+    "build:ui": "rm -rf build && cd ../frontend && npm run build --prod && cp -r build ../backend",
+    "lint": "eslint ."
   },
   "author": "Alex Koen",
   "license": "MIT",
   "devDependencies": {
+    "eslint": "^7.2.0",
     "heroku": "^7.42.1",
     "nodemon": "^2.0.4"
   },
