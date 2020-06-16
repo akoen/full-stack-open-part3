@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 
+mongoose.set('useCreateIndex', true);
+
 const url = process.env.MONGODB_URI;
 
 mongoose
@@ -12,7 +14,10 @@ mongoose
   });
 
 const personSchema = new mongoose.Schema({
-  name: String,
+  name: {
+    type: String,
+    unique: true,
+  },
   number: String,
   date: Date,
 });
