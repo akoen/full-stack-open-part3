@@ -53,13 +53,22 @@ const PersonForm = (props) => {
           });
       }
     } else {
-      personService.addPerson(newPerson).then((response) => {
-        setTimeout(() => {
-          setBanner({ message: null, colour: 'red' });
-        }, 3000);
-        setBanner({ message: `Added ${response.name}`, colour: 'green' });
-        setPersons(persons.concat(response));
-      });
+      personService
+        .addPerson(newPerson)
+        .then((response) => {
+          setTimeout(() => {
+            setBanner({ message: null, colour: 'red' });
+          }, 3000);
+          setBanner({ message: `Added ${response.name}`, colour: 'green' });
+          setPersons(persons.concat(response));
+        })
+        .catch((error) => {
+          setTimeout(() => {
+            setBanner({ message: null, colour: 'red' });
+          }, 3000);
+          console.log(error.response.data);
+          setBanner({ message: error.response.data.error, colour: 'red' });
+        });
     }
 
     setNewName('');
